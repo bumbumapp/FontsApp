@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bumbumapps.stylishtext">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name="com.bumbumapps.stylishtext.ApplicationClass"
+        android:icon="@mipmap/app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.bumbumapps.stylishtext.activities.HelpActivity"
+            android:parentActivityName="com.bumbumapps.stylishtext.activities.HomeActivity">
+
+        </activity>
+        <activity
+            android:name="com.bumbumapps.stylishtext.activities.ThemesActivity"
+            android:parentActivityName="com.bumbumapps.stylishtext.activities.HomeActivity">
+
+        </activity>
+        <activity
+            android:name="com.bumbumapps.stylishtext.activities.EmoticonGridActivity"
+            android:parentActivityName="com.bumbumapps.stylishtext.activities.HomeActivity" />
+        <activity
+            android:name="com.bumbumapps.stylishtext.activities.EmoticonsActivity"
+            android:parentActivityName="com.bumbumapps.stylishtext.activities.EmoticonGridActivity" />
+        <activity
+            android:name="com.bumbumapps.stylishtext.activities.ShowActivity"
+            android:parentActivityName="com.bumbumapps.stylishtext.activities.HomeActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.bumbumapps.stylishtext.activities.HomeActivity" />
+
+        <activity
+            android:name="com.bumbumapps.stylishtext.activities.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+
+        <activity
+            android:name="com.bumbumapps.stylishtext.menu.StylishProcessTextActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeDi">
+            <intent-filter>
+                <action android:name="android.intent.action.PROCESS_TEXT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bumbumapps.stylishtext.floating.stylish.FloatingStylishCreateShortCutActivity"
+            android:icon="@drawable/ic_bubble"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bumbumapps.stylishtext.floating.stylish.FloatingStylishOpenShortCutActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.TransparentBackground" />
+
+        <service
+            android:name="com.bumbumapps.stylishtext.floating.stylish.FloatingStylishService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.CONFIGURATION_CHANGED" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

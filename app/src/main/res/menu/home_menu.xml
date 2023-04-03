@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group>
+        <item
+            android:id="@+id/floatmenu"
+            android:title="Bubble Floating"
+            android:icon="@drawable/ic_bubble"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/info"
+            android:title="Help"
+            android:icon="@drawable/ic_info_outline_black_24dp"
+            app:showAsAction="never"></item>
+    </group>
+</menu>

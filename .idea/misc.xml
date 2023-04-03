@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/drawable-mdpi/rectag_bolder.xml" value="0.20277777777777778" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/drawable/ic_copy.xml" value="0.20277777777777778" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/drawable/rec_item.xml" value="0.20277777777777778" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/drawable/round.xml" value="0.20277777777777778" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/activity_emoticon_grid.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/activity_emoticons.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/activity_home.xml" value="0.13069908814589665" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/activity_process_text.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/activity_show.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/activity_themes.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/adapter_decoration.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/adapter_font.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/content_home.xml" value="0.1" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/floating_stylish.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/floating_stylish_icon.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/fragment_bubble.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/fragment_decoration.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/fragment_emoji.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/fragment_emoji_sheet.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/fragment_glitch.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/fragment_pro_name.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/fragment_repeat.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/fragment_setting.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/fragment_stylish_process_text.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/fragment_text_play.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/gridview.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/item_emoticons.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/item_sheet.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/item_text.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/layout_exit.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/list_item_style_floating.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/list_item_stylish_process_text.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/nav_header.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/num_item.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/sheet_symbols.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/layout/themes_dialog.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/menu/activity_main_drawer.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/menu/bottom_menu.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/menu/general_menu.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Downloads/Source Code/app/src/main/res/menu/home_menu.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Play store projects/Source Code/app/src/main/res/layout/activity_help.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Studi oProjects/Source Code/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.15572916666666667" />
+        <entry key="..\:/Users/Durkhan/Studi oProjects/Source Code/app/src/main/res/drawable/app.xml" value="0.15572916666666667" />
+        <entry key="..\:/Users/Durkhan/Studi oProjects/Source Code/app/src/main/res/drawable/ic_launcher_background.xml" value="0.15572916666666667" />
+        <entry key="..\:/Users/Durkhan/Studi oProjects/Source Code/app/src/main/res/layout/activity_help.xml" value="0.20244565217391305" />
+        <entry key="..\:/Users/Durkhan/Studi oProjects/Source Code/app/src/main/res/layout/activity_home.xml" value="0.12892603850050657" />
+        <entry key="..\:/Users/Durkhan/Studi oProjects/Source Code/app/src/main/res/layout/activity_themes.xml" value="0.21105072463768115" />
+        <entry key="..\:/Users/Durkhan/Studi oProjects/Source Code/app/src/main/res/layout/dialog_about.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/Durkhan/Studi oProjects/Source Code/app/src/main/res/layout/floating_delete_box.xml" value="0.26875" />
+        <entry key="..\:/Users/Durkhan/Studi oProjects/Source Code/app/src/main/res/layout/fragment_bubble.xml" value="0.20244565217391305" />
+        <entry key="..\:/Users/Durkhan/Studi oProjects/Source Code/app/src/main/res/layout/fragment_setting.xml" value="0.21105072463768115" />
+        <entry key="..\:/Users/Durkhan/Studi oProjects/Source Code/app/src/main/res/layout/item_text.xml" value="0.21105072463768115" />
+        <entry key="..\:/Users/Durkhan/Studi oProjects/Source Code/app/src/main/res/mipmap-anydpi-v26/app_logo.xml" value="0.15572916666666667" />
+        <entry key="..\:/Users/Durkhan/Studi oProjects/Source Code/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/Durkhan/Studi oProjects/Source Code/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.28489583333333335" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

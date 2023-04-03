@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorBackground"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.bumbumapps.stylishtext.fragments.FontFragment">
+
+   <TextView
+       android:id="@+id/nofav"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:textSize="22sp"
+       android:visibility="gone"
+       android:gravity="center"
+       android:text="No favourite added"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/favlist"
+            android:layout_width="match_parent"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

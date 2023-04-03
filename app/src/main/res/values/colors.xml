@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Change night color here-->
+    <color name="colorPrimary">#221f35</color>
+    <color name="colorPrimaryDark">#20242f</color>
+    <color name="colorAccent">#FFC107</color>
+    <color name="white">#FFFFFF</color>
+    <color name="endhome">#56FFFFFF</color>
+    <color name="litetextcolor">#ECECEC</color>
+    <color name="md_amber_500">#ffc107</color>
+
+    <color name="ItemColorStart1">#7b4397</color>
+    <color name="ItemColorEnd1">#dc2430</color>
+    <color name="ItemColorStart2">#ff512f</color>
+    <color name="ItemColorEnd2">#dd2476</color>
+
+
+    <color name="c1">#FFC107</color>
+    <color name="ItemColorStart3">#de6262</color>
+    <color name="ItemColorEnd3">#ffb88c</color>
+
+    <color name="colorBackground">#221f35</color>
+    <color name="colorBackground1">#FFC107</color>
+    <color name="colorBgRadiuo">@color/colorCard</color>
+    <color name="colorCard">#373553</color>
+    <color name="colorLine">#4DFFFFFF</color>
+    <color name="colorText">#ffffff</color>
+    <color name="colorTint">#FFC107</color>
+    <color name="ItemColorStart4">#02aab0</color>
+    <color name="ItemColorEnd4">#00cdac</color>
+
+    <color name="ItemColorStart5">#aa076b</color>
+    <color name="ItemColorEnd5">#61045f</color>
+
+    <color name="ItemColorStart6">#56ab2f</color>
+    <color name="ItemColorEnd6">#a8e063</color>
+
+    <color name="ItemColorStart7">#d38312</color>
+    <color name="ItemColorEnd7">#a83279</color>
+
+    <color name="ItemColorStart8">#2193b0</color>
+    <color name="ItemColorEnd8">#6dd5ed</color>
+
+    <color name="ItemColorStart9">#614385</color>
+    <color name="ItemColorEnd9">#516395</color>
+
+    <color name="ItemColorStart10">#bdc3c7</color>
+    <color name="ItemColorEnd10">#2c3e50</color>
+
+    <color name="ItemColorStart11">#4568dc</color>
+    <color name="ItemColorEnd11">#b06ab3</color>
+
+
+    <color name="grey_1">#e6e6e6</color>
+    <color name="grey_2">#999999</color>
+    <color name="grey_3">#37474f</color>
+    <color name="grey_4">#263238</color>
+    <color name="grey_5">#b5bdbf</color>
+    <color name="colorTexthint">#80FFFFFF</color>
+
+</resources>

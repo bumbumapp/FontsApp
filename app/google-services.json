@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1002442233750",
+    "firebase_url": "https://tabs-571ff.firebaseio.com",
+    "project_id": "tabs-571ff",
+    "storage_bucket": "tabs-571ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002442233750:android:8db39811de58e2f3302fb7",
+        "android_client_info": {
+          "package_name": "com.arkdev.stylishtext"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1002442233750-ctp3463r31uarlo5jj0d6mvlvd6cgse0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgLI12GzZF5qMjItYrBdu8qGjudVFQziI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1002442233750-ctp3463r31uarlo5jj0d6mvlvd6cgse0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorCard"
+        app:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorCard"
+            android:orientation="vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <TextView
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/colorText"
+                android:gravity="center"
+                android:id="@+id/tv_alert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Exit" />
+
+            <TextView
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#ff888888"
+                android:gravity="center"
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="Do you want to exit?" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:paddingBottom="8dp"
+                android:layout_height="wrap_content">
+
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:textColor="@android:color/white"                        android:gravity="center"
+                        android:background="@drawable/btn_1"
+                        android:id="@+id/tv_no"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:stateListAnimator="@null"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No" />
+
+
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/tv_yes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:stateListAnimator="@null"
+                        android:background="@drawable/btn_2"
+                        android:text="Yes"
+                        android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
