@@ -1,8 +1,10 @@
 package com.bumbumapps.stylishtext.adapters;
 
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,9 +13,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumbumapps.stylishtext.utils.AdsUtils;
 import com.bumbumapps.stylishtext.utils.BottomSheet;
 import com.bumbumapps.stylishtext.utils.CopyHandler;
 import com.bumbumapps.stylishtext.R;
+import com.bumbumapps.stylishtext.utils.Globals;
+import com.bumbumapps.stylishtext.utils.Timers;
+import com.huawei.hms.ads.AdListener;
 
 import java.util.ArrayList;
 
@@ -50,7 +56,8 @@ public class FontAdapter extends RecyclerView.Adapter<FontAdapter.MyViewHolder> 
         // Copy Button
         holder.copy.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { copyHandler.copyText(text);
+            public void onClick(View v) {
+                copyHandler.copyText(text);
             }
         });
         // Share Button

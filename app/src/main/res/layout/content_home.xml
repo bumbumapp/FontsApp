@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:hwads="http://schemas.android.com/tools"
     tools:context="com.bumbumapps.stylishtext.activities.HomeActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -34,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorBackground"
-        android:layout_marginBottom="?attr/actionBarSize"
+        android:layout_above="@+id/chipnav"
         android:layout_marginTop="?attr/actionBarSize">
 
 <!--        <com.google.android.gms.ads.AdView-->
@@ -63,6 +64,15 @@
         android:layout_gravity="bottom"
         android:background="#373553"
         android:elevation="10dp"
+        android:layout_above="@+id/hw_banner_view"
         app:cnb_menuResource="@menu/bottom_menu" />
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <com.huawei.hms.ads.banner.BannerView
+        android:id="@+id/hw_banner_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        hwads:adId="@string/banner_id"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        hwads:bannerSize="BANNER_SIZE_360_57"/>
+</RelativeLayout>

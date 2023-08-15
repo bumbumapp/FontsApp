@@ -10,8 +10,9 @@ import android.widget.GridView;
 
 import com.bumbumapps.stylishtext.adapters.CustomAdapter;
 import com.bumbumapps.stylishtext.R;
-import com.google.android.gms.ads.MobileAds;
+import com.bumbumapps.stylishtext.utils.AdsUtils;
 import com.google.android.material.appbar.MaterialToolbar;
+import com.huawei.hms.ads.banner.BannerView;
 
 public class EmoticonGridActivity extends AppCompatActivity {
     String[] logos = {"Love", "Happy", "Music", "Animals", "Angry", "Sad", "Sleeping", "Excited", "Hungry", "Shy", "Other","Kiss","Smile","Laugh"};
@@ -31,8 +32,7 @@ public class EmoticonGridActivity extends AppCompatActivity {
            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
         //Admob Ad Initialize
-        MobileAds.initialize(this);
-//        loadBannerAds();
+        loadBannerAds();
         simpleGrid = findViewById(R.id.simpleGridView);
         simpleGrid.setAdapter(new CustomAdapter(this, logos,icon));
         simpleGrid.setOnItemClickListener(new simpleGridListner());
@@ -50,9 +50,8 @@ public class EmoticonGridActivity extends AppCompatActivity {
         }
     }
     //Banner Ad
-//    private void loadBannerAds() {
-//        AdView mAdView = findViewById(R.id.adView);
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        mAdView.loadAd(adRequest);
-//    }
+    private void loadBannerAds() {
+        BannerView bannerView=findViewById(R.id.hw_banner_view);
+        AdsUtils.showGoogleBannerAd(this,bannerView);
+    }
 }

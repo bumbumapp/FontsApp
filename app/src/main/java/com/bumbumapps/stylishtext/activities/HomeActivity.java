@@ -19,7 +19,7 @@ import com.bumbumapps.stylishtext.R;
 import com.bumbumapps.stylishtext.floating.stylish.FloatingStylishOpenShortCutActivity;
 import com.bumbumapps.stylishtext.fragments.FavouriteFragment;
 import com.bumbumapps.stylishtext.fragments.HomeFragment;
-import com.google.android.gms.ads.MobileAds;
+import com.bumbumapps.stylishtext.utils.AdsUtils;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.appupdate.AppUpdateManager;
@@ -29,6 +29,7 @@ import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.InstallStatus;
 import com.google.android.play.core.install.model.UpdateAvailability;
 
+import com.huawei.hms.ads.banner.BannerView;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 import java.util.Objects;
@@ -48,8 +49,7 @@ public class HomeActivity extends AppCompatActivity implements ChipNavigationBar
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         //Admob Ads Initialize
-        MobileAds.initialize(this);
-        //loadBannerAds();
+        loadBannerAds();
         //Firebase Analytics
 
         //Bottom Navigation
@@ -66,6 +66,8 @@ public class HomeActivity extends AppCompatActivity implements ChipNavigationBar
             }
 
         });
+        AdsUtils.loadGoogleInterstitialAd(this);
+
         appUpdateManager.registerListener(installStateUpdatedListener);
         navBar.setOnItemSelectedListener(this);
         navBar.setItemSelected(R.id.home,true);
@@ -158,11 +160,10 @@ public class HomeActivity extends AppCompatActivity implements ChipNavigationBar
 
         customDialog.show();
     }
-//    private void loadBannerAds() {
-//        AdView mAdView = findViewById(R.id.adView);
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        mAdView.loadAd(adRequest);
-//    }
+    private void loadBannerAds() {
+        BannerView bannerView=findViewById(R.id.hw_banner_view);
+        AdsUtils.showGoogleBannerAd(this,bannerView);
+    }
 
     @Override
     public boolean onMenuItemClick(MenuItem item) {

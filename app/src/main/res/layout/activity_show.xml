@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:hwads="http://schemas.android.com/tools"
     android:background="@color/colorBackground"
     tools:context="com.bumbumapps.stylishtext.activities.ShowActivity">
 
@@ -27,20 +28,20 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="?attr/actionBarSize">
 
-<!--    <com.google.android.gms.ads.AdView-->
-<!--        xmlns:ads="http://schemas.android.com/apk/res-auto"-->
-<!--        android:id="@+id/adView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="@color/colorBackground"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        ads:adSize="BANNER"-->
-<!--        ads:adUnitId="@string/banner_ads">-->
-<!--    </com.google.android.gms.ads.AdView>-->
+    <com.huawei.hms.ads.banner.BannerView
+        android:id="@+id/hw_banner_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        hwads:adId="@string/banner_id"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        hwads:bannerSize="BANNER_SIZE_360_57"/>
 
     <FrameLayout
         android:id="@+id/showFragment"
         android:layout_width="match_parent"
+        android:layout_above="@+id/hw_banner_view"
         android:layout_height="match_parent">
     </FrameLayout>
 </RelativeLayout>

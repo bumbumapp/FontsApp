@@ -16,8 +16,9 @@ import com.bumbumapps.stylishtext.fragments.ProNameFragment;
 import com.bumbumapps.stylishtext.fragments.RepeatFragment;
 import com.bumbumapps.stylishtext.fragments.TextDesignFragment;
 import com.bumbumapps.stylishtext.fragments.TextPlayFragment;
-import com.google.android.gms.ads.MobileAds;
+import com.bumbumapps.stylishtext.utils.AdsUtils;
 import com.google.android.material.appbar.MaterialToolbar;
+import com.huawei.hms.ads.banner.BannerView;
 //import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class ShowActivity extends AppCompatActivity {
@@ -35,8 +36,7 @@ public class ShowActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
         //Admob Ad Initialize
-        MobileAds.initialize(this);
-//        loadBannerAds();
+        loadBannerAds();
 
 
         int itemid = getIntent().getIntExtra(KEY,1);
@@ -92,11 +92,10 @@ public class ShowActivity extends AppCompatActivity {
                 .commit();
 
     }
-//    private void loadBannerAds() {
-//        AdView mAdView = findViewById(R.id.adView);
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        mAdView.loadAd(adRequest);
-//    }
+    private void loadBannerAds() {
+        BannerView bannerView=findViewById(R.id.hw_banner_view);
+        AdsUtils.showGoogleBannerAd(this,bannerView);
+    }
 
 
 }

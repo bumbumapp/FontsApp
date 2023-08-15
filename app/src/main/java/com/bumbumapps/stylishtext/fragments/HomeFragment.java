@@ -16,10 +16,7 @@ import android.view.ViewGroup;
 import com.bumbumapps.stylishtext.activities.EmoticonGridActivity;
 import com.bumbumapps.stylishtext.R;
 import com.bumbumapps.stylishtext.activities.ShowActivity;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+import com.huawei.hms.ads.InterstitialAd;
 
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
@@ -55,7 +52,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         item9.setOnClickListener(this);
         item10.setOnClickListener(this);
         item11.setOnClickListener(this);
-        loadInterAd();
+
 
         return view;
     }
@@ -71,91 +68,66 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             intent = new Intent(activity, ShowActivity.class);
             intent.putExtra(KEY,1);
             startActivity(intent);
-            showAd();
+
         }
         if (v == item2){
             intent = new Intent(activity,ShowActivity.class);
             intent.putExtra(KEY,2);
             startActivity(intent);
-            showAd();
+
         }
         if (v == item3){
             intent = new Intent(activity, EmoticonGridActivity.class);
             startActivity(intent);
-            showAd();
+
         }
         if (v == item4){
             intent = new Intent(activity,ShowActivity.class);
             intent.putExtra(KEY,4);
             startActivity(intent);
-            showAd();
+
         }
         if (v == item5){
             intent = new Intent(activity,ShowActivity.class);
             intent.putExtra(KEY,5);
             startActivity(intent);
-            showAd();
         }
         if (v == item6){
             intent = new Intent(activity,ShowActivity.class);
             intent.putExtra(KEY,6);
             startActivity(intent);
-            showAd();
         }
         if (v == item7){
             intent = new Intent(activity,ShowActivity.class);
             intent.putExtra(KEY,7);
             startActivity(intent);
-            showAd();
+
         }
         if (v == item8){
             intent = new Intent(activity,ShowActivity.class);
             intent.putExtra(KEY,8);
             startActivity(intent);
-            showAd();
         }
         if (v == item9){
             intent = new Intent(activity,ShowActivity.class);
             intent.putExtra(KEY,9);
             startActivity(intent);
-            showAd();
         }
         if (v == item10){
             intent = new Intent(activity,ShowActivity.class);
             intent.putExtra(KEY,10);
             startActivity(intent);
-            showAd();
+
         }
         if (v == item11){
             intent = new Intent(activity,ShowActivity.class);
             intent.putExtra(KEY,11);
             startActivity(intent);
-            showAd();
+
         }
     }
-    private void showAd(){
-        if (mInterstitialAd != null) {
-            mInterstitialAd.show(activity);
-        }
-    }
-    private void loadInterAd(){
-        AdRequest adRequest = new AdRequest.Builder().build();
 
-        InterstitialAd.load(activity, activity.getString(R.string.interstitial_ads), adRequest,
-                new InterstitialAdLoadCallback() {
-                    @Override
-                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-                        // The mInterstitialAd reference will be null until
-                        // an ad is loaded.
-                        mInterstitialAd = interstitialAd;
-                    }
 
-                    @Override
-                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                        // Handle the error
-                        mInterstitialAd = null;
-                    }
-                });
-    }
+
 
 }

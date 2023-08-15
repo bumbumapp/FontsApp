@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 
 import androidx.appcompat.app.AppCompatDelegate;
 
-import com.google.android.gms.ads.MobileAds;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 
 public class ApplicationClass extends Application {
@@ -16,9 +16,7 @@ public class ApplicationClass extends Application {
     public void onCreate() {
         super.onCreate();
         // Enable verbose OneSignal logging to debug issues if needed.
-
-        MobileAds.initialize(this, initializationStatus -> {
-        });
+        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true);
         //Night Mode Check
         final SharedPreferences appSettingsPrefs = getSharedPreferences(PREF,0);
         final boolean isNightModeOn = appSettingsPrefs.getBoolean(NIGHT_MODE, false);
