@@ -15,6 +15,8 @@ public class ApplicationClass extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        // Android 15+ draws edge-to-edge: pad activity content by the system bar insets.
+        EdgeToEdgeCallbacks.register(this);
         // Enable verbose OneSignal logging to debug issues if needed.
         FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true);
         //Night Mode Check

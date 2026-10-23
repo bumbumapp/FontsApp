@@ -58,7 +58,7 @@ public class FloatingStylishService extends FloatingView implements TextWatcher 
                 .setSmallIcon(R.mipmap.app_logo)
                 .setContentTitle(getString(R.string.app_name))
                 .setContentText(getString(R.string.tap))
-                .setContentIntent(PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT))
+                .setContentIntent(PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE))
                 .setPriority(NotificationCompat.PRIORITY_MIN)
                 .build();
     }

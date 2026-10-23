@@ -128,7 +128,8 @@ public abstract class FloatingView extends Service implements OnTouchListener {
     @Override
     public void onCreate() {
         super.onCreate();
-        startForeground(NOTIFICATION_ID, createNotification(createNotificationChannel()));
+        androidx.core.app.ServiceCompat.startForeground(this, NOTIFICATION_ID, createNotification(createNotificationChannel()),
+                Build.VERSION.SDK_INT >= 34 ? android.content.pm.ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE : 0);
 
         // Load margins, distances, etc
         ViewConfiguration vc = ViewConfiguration.get(getContext());

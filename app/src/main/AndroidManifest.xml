@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bumbumapps.stylishtext">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
+        android:enableOnBackInvokedCallback="false"
         android:name="com.bumbumapps.stylishtext.ApplicationClass"
         android:icon="@mipmap/app_logo"
         android:label="@string/app_name"
@@ -37,6 +39,7 @@
 
         <activity
             android:name="com.bumbumapps.stylishtext.activities.SplashActivity"
+            android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -65,6 +68,7 @@
         </activity>
         <activity
             android:name="com.bumbumapps.stylishtext.floating.stylish.FloatingStylishCreateShortCutActivity"
+            android:exported="true"
             android:icon="@drawable/ic_bubble"
             android:label="@string/app_name">
             <intent-filter>
@@ -83,7 +87,11 @@
 
         <service
             android:name="com.bumbumapps.stylishtext.floating.stylish.FloatingStylishService"
-            android:exported="false">
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Floating bubble (overlay) the user opens to style text inside other apps" />
             <intent-filter>
                 <action android:name="android.intent.action.CONFIGURATION_CHANGED" />
             </intent-filter>
