@@ -15,11 +15,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.bumbumapps.stylishtext.BuildConfig;
 import com.bumbumapps.stylishtext.R;
 import com.bumbumapps.stylishtext.floating.stylish.FloatingStylishOpenShortCutActivity;
 import com.bumbumapps.stylishtext.fragments.FavouriteFragment;
 import com.bumbumapps.stylishtext.fragments.HomeFragment;
-import com.bumbumapps.stylishtext.utils.AdsUtils;
+import com.bumbumapps.stylishtext.ads.AdsManager;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.appupdate.AppUpdateManager;
@@ -29,7 +30,6 @@ import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.InstallStatus;
 import com.google.android.play.core.install.model.UpdateAvailability;
 
-import com.huawei.hms.ads.banner.BannerView;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 import java.util.Objects;
@@ -55,7 +55,8 @@ public class HomeActivity extends AppCompatActivity implements ChipNavigationBar
         //Bottom Navigation
         navBar = findViewById(R.id.chipnav);
         appUpdateManager = AppUpdateManagerFactory.create(this);
-        appUpdateManager.getAppUpdateInfo().addOnSuccessListener(result -> {
+        // Play in-app updates only exist on Google Play; the Huawei (hms) build skips them.
+        if ("play".equals(BuildConfig.FLAVOR)) appUpdateManager.getAppUpdateInfo().addOnSuccessListener(result -> {
             if (result.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE && result.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)){
                 try {
                     appUpdateManager.startUpdateFlowForResult(result, AppUpdateType.FLEXIBLE, HomeActivity.this,FLEXIBLE_APP_UPDATE_REQ_CODE);
@@ -66,7 +67,6 @@ public class HomeActivity extends AppCompatActivity implements ChipNavigationBar
             }
 
         });
-        AdsUtils.loadGoogleInterstitialAd(this);
 
         appUpdateManager.registerListener(installStateUpdatedListener);
         navBar.setOnItemSelectedListener(this);
@@ -161,8 +161,8 @@ public class HomeActivity extends AppCompatActivity implements ChipNavigationBar
         customDialog.show();
     }
     private void loadBannerAds() {
-        BannerView bannerView=findViewById(R.id.hw_banner_view);
-        AdsUtils.showGoogleBannerAd(this,bannerView);
+        AdsManager.get(this).init(this);
+        AdsManager.get(this).loadBanner(this, findViewById(R.id.hw_banner_view));
     }
 
     @Override

@@ -10,9 +10,8 @@ import android.widget.GridView;
 
 import com.bumbumapps.stylishtext.adapters.CustomAdapter;
 import com.bumbumapps.stylishtext.R;
-import com.bumbumapps.stylishtext.utils.AdsUtils;
+import com.bumbumapps.stylishtext.ads.AdsManager;
 import com.google.android.material.appbar.MaterialToolbar;
-import com.huawei.hms.ads.banner.BannerView;
 
 public class EmoticonGridActivity extends AppCompatActivity {
     String[] logos = {"Love", "Happy", "Music", "Animals", "Angry", "Sad", "Sleeping", "Excited", "Hungry", "Shy", "Other","Kiss","Smile","Laugh"};
@@ -51,7 +50,7 @@ public class EmoticonGridActivity extends AppCompatActivity {
     }
     //Banner Ad
     private void loadBannerAds() {
-        BannerView bannerView=findViewById(R.id.hw_banner_view);
-        AdsUtils.showGoogleBannerAd(this,bannerView);
+        AdsManager.get(this).init(this);
+        AdsManager.get(this).loadBanner(this, findViewById(R.id.hw_banner_view));
     }
 }

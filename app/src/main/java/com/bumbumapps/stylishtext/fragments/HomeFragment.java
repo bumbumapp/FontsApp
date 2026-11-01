@@ -16,7 +16,6 @@ import android.view.ViewGroup;
 import com.bumbumapps.stylishtext.activities.EmoticonGridActivity;
 import com.bumbumapps.stylishtext.R;
 import com.bumbumapps.stylishtext.activities.ShowActivity;
-import com.huawei.hms.ads.InterstitialAd;
 
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
@@ -25,7 +24,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     CardView item1,item2,item3,item4,item5,item6,item7,item8,item9,item10,item11;
     Intent intent;
     String KEY = "Home";
-    InterstitialAd mInterstitialAd;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

@@ -16,9 +16,8 @@ import com.bumbumapps.stylishtext.fragments.ProNameFragment;
 import com.bumbumapps.stylishtext.fragments.RepeatFragment;
 import com.bumbumapps.stylishtext.fragments.TextDesignFragment;
 import com.bumbumapps.stylishtext.fragments.TextPlayFragment;
-import com.bumbumapps.stylishtext.utils.AdsUtils;
+import com.bumbumapps.stylishtext.ads.AdsManager;
 import com.google.android.material.appbar.MaterialToolbar;
-import com.huawei.hms.ads.banner.BannerView;
 //import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class ShowActivity extends AppCompatActivity {
@@ -93,8 +92,8 @@ public class ShowActivity extends AppCompatActivity {
 
     }
     private void loadBannerAds() {
-        BannerView bannerView=findViewById(R.id.hw_banner_view);
-        AdsUtils.showGoogleBannerAd(this,bannerView);
+        AdsManager.get(this).init(this);
+        AdsManager.get(this).loadBanner(this, findViewById(R.id.hw_banner_view));
     }
 
 

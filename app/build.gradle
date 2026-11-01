@@ -12,11 +12,27 @@ android {
         applicationId "com.bumbumapps.styletext"
         minSdk 23
         targetSdk 36
-        // Not on Play yet: repo versionCode 3 + 1.
-        versionCode 4
+        // Above the live AppGallery versionCode (4).
+        versionCode 5
         versionName "1.2.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    // play = Google Play, hms = Huawei AppGallery (Huawei Ads / Petal, no Google Mobile Services).
+    // Release uses the app's Petal slots (override with -PHMS_BANNER_ID=...); debug builds use Huawei's test slots.
+    flavorDimensions = ['store']
+    productFlavors {
+        play {
+            dimension 'store'
+        }
+        hms {
+            dimension 'store'
+            resValue 'string', 'hms_banner_id', (project.findProperty('HMS_BANNER_ID') ?: 'h01v53zw8u').toString()
+            resValue 'string', 'hms_interstitial_id', (project.findProperty('HMS_INTERSTITIAL_ID') ?: 'm518s1rwxx').toString()
+            resValue 'string', 'hms_test_banner_id', 'testw6vs28auh3'
+            resValue 'string', 'hms_test_interstitial_id', 'testb4znbuh3n2'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled true
@@ -29,6 +45,7 @@ android {
     }
     buildFeatures {
         buildConfig true
+        resValues true
     }
     lint {
         abortOnError false
@@ -43,6 +60,7 @@ android {
 }
 
 dependencies {
+    hmsImplementation 'com.huawei.hms:ads-lite:13.4.91.301'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
@@ -66,8 +84,7 @@ dependencies {
     implementation 'com.google.android.play:review:2.0.2'
     implementation 'com.google.android.play:app-update:2.1.0'
 //    implementation 'com.onesignal:OneSignal:4.4.0'
-    implementation 'com.huawei.hms:ads-lite:13.4.91.301'
-    implementation 'com.huawei.agconnect:agconnect-core:1.9.6.300'
+    hmsImplementation 'com.huawei.agconnect:agconnect-core:1.9.6.300'
 
     implementation platform('com.google.firebase:firebase-bom:34.4.0')
 

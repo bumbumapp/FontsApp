@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:hwads="http://schemas.android.com/tools"
     tools:context="com.bumbumapps.stylishtext.activities.HomeActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -65,14 +64,15 @@
         android:background="#373553"
         android:elevation="10dp"
         android:layout_above="@+id/hw_banner_view"
+        android:layout_alignWithParentIfMissing="true"
         app:cnb_menuResource="@menu/bottom_menu" />
-    <com.huawei.hms.ads.banner.BannerView
+    <!-- Huawei build: Petal banner added by AdsManager (hidden until filled); Play build: stays empty. -->
+    <FrameLayout
         android:id="@+id/hw_banner_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        hwads:adId="@string/banner_id"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        hwads:bannerSize="BANNER_SIZE_360_57"/>
+        android:visibility="gone" />
 </RelativeLayout>

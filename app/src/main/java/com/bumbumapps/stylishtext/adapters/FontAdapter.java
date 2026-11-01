@@ -13,13 +13,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.bumbumapps.stylishtext.utils.AdsUtils;
 import com.bumbumapps.stylishtext.utils.BottomSheet;
 import com.bumbumapps.stylishtext.utils.CopyHandler;
 import com.bumbumapps.stylishtext.R;
-import com.bumbumapps.stylishtext.utils.Globals;
-import com.bumbumapps.stylishtext.utils.Timers;
-import com.huawei.hms.ads.AdListener;
 
 import java.util.ArrayList;
 
